@@ -10,6 +10,7 @@ A peg solitaire game for the web, built with React, TypeScript and PixiJS.
 ### Prerequisites:
 
 - [nvm](https://nodejs.org/en/download/package-manager)
+
   ```
   $ nvm install 24
   $ nvm use 24

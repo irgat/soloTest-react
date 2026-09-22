@@ -9,21 +9,24 @@ function GameBoard() {
     let cancelled = false;
     let initialised = false;
 
-    app.init({
-      background: "#2c2c2c",
-      resizeTo: window,
-    }).then(() => {
-      initialised = true;
+    app
+      .init({
+        background: "#2c2c2c",
+        resizeTo: window,
+      })
+      .then(() => {
+        initialised = true;
 
-      if (cancelled) {
-        app.destroy(true, { children: true, texture: true });
-        return;
-      }
+        if (cancelled) {
+          app.destroy(true, { children: true, texture: true });
+          return;
+        }
 
-      containerRef.current?.appendChild(app.canvas);
-    }).catch((error: unknown) => {
-      console.error("PixiJS failed to initialise", error);
-    });
+        containerRef.current?.appendChild(app.canvas);
+      })
+      .catch((error: unknown) => {
+        console.error("PixiJS failed to initialise", error);
+      });
 
     return () => {
       cancelled = true;

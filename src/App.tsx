@@ -1,7 +1,7 @@
-import GameBoard from './game/GameBoard'
+import GameBoard from "./game/GameBoard";
 
 function App() {
-  return <GameBoard />
+  return <GameBoard />;
 }
 
-export default App
+export default App;
