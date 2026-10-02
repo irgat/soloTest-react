@@ -46,3 +46,15 @@ The build output goes to `dist`. To serve that output locally:
 ```
 $ yarn preview
 ```
+
+### Tests:
+
+```
+$ yarn test
+```
+
+With a coverage report, written to `coverage`:
+
+```
+$ yarn test:coverage
+```
