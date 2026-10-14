@@ -67,4 +67,9 @@ $ yarn test:coverage
 $ yarn verify
 ```
 
-This runs the linter, the format check, the type check and the tests. CI runs the same checks, plus a production build with `yarn build`. The linter treats warnings as errors. If the format check fails, run `yarn format`.
+This runs the linter, the format check, the type check and the tests. The linter treats warnings as errors. If the format check fails, run `yarn format`.
+
+### Workflows:
+
+- **`ci.yml`** runs on every push and pull request. It runs the four checks above, plus a production build with `yarn build`.
+- **`review.yml`** runs a Claude review on pull requests. It is off unless `CLAUDE_REVIEW` and `CLAUDE_CODE_OAUTH_TOKEN` are set on the repository.
